@@ -1,35 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import './App.css';
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <PriceCard/>
+      <PriceCard1/>
+      <PriceCard2/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  );
 }
 
-export default App
+
+
+export default App;
+ 
+function PriceCard(){
+  return(
+    <div className='card-content'>
+      <div className="container">
+            <h5>FREE</h5>
+            <h6> $0<span>/month</span></h6>
+            <hr></hr>
+            <ul class="fa-ul">
+              <p>✓  Single User</p>
+              <p>✓  5GB Storage</p>
+              <p>✓  Unlimited Public Projects</p>
+              <p>✓  Communtity Access</p>
+              <p>✓  Unlimitied Private projects</p>
+              <p className="text-muted">✕  Dedicatede Phone Support</p>
+              <p className="text-muted">✕  Free subdomain</p>
+              <p className="text-muted">✕  Monthly Status Reports</p>
+            </ul>
+            <div className="d-grid">
+              <a href="#" class="btn btn-primary ">Button</a>
+            </div>
+          </div>
+        </div>
+  )
+}
+function PriceCard1(){
+  return(
+    <div className='card-content'>
+      <div className="container">
+            <h5>Plus</h5>
+            <h6> $9<span >/month</span></h6>
+            <hr></hr>
+            <ul class="fa-ul">
+              <p>✓  5 User</p>
+              <p>✓  50GB Storage</p>
+              <p>✓  Unlimited Public Projects</p>
+              <p>✓  Communtity Access</p>
+              <p>✓  Unlimitied Private projects</p>
+              <p>✓  Dedicatede Phone Support</p>
+              <p>✓  Free subdomain</p>
+              <p className="text-muted">✕  Monthly Status Reports</p>
+            </ul>
+            <div className="d-grid">
+              <a href="#" class="btn btn-primary ">Button</a>
+            </div>
+          </div>
+        </div>
+  )
+}
+ function PriceCard2(){
+  return(
+    <div className='card-content'>
+      <div className="container">
+            <h5>Pro</h5>
+            <h6> $49<span class="period">/month</span></h6>
+            <hr></hr>
+            <ul class="fa-ul">
+              <p>✓ <b>Unlimited User</b></p>
+              <p>✓  150GB Storage</p>
+              <p>✓  Unlimited Public Projects</p>
+              <p>✓  Communtity Access</p>
+              <p>✓  Unlimitied Private projects</p>
+              <p>✓  Dedicatede Phone Support</p>
+              <p>✓  Free subdomain</p>
+              <p>✓  <b>Monthly Status Reports</b></p>
+            </ul>
+            <div className="d-grid">
+              <a href="#" class="btn btn-primary ">Button</a>
+              </div>
+          </div>
+        </div>
+  )
+}
